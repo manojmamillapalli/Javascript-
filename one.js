@@ -89,9 +89,37 @@ console.log(--c);
 
 
 
-var d=45;
-var e="hello";
-var f=63;
-var g=d+e+f;
+var d = 45;
+var e = "hello";
+var f = 63;
+var g = d + f + e;
 console.log(g);
-console.log(typeof(g));
+console.log(typeof (g));
+
+//assignment
+var a = 34;
+var b = 23;
+var c = a + b;
+console.log(c);
+
+//relational operators 
+//<=, >=, ==, ===, !=, !==
+var a=25;
+var b='25';
+console.log(a==b);//t
+console.log(a>=b);//t
+console.log(a<=b);//t
+console.log(a===b);//f
+console.log(a!=b);//f
+console.log(a!==b);//t
+console.log(a<b?"true" : "false");// checks if a>b or not if a>b prints false other wisw prints true
+
+
+//logical operators 
+//&&, ||, !
+var a=25;
+var b=35;
+var c=40;
+console.log(a>b && a>c);
+console.log(a<b || b<c);
+console.log(!b);
