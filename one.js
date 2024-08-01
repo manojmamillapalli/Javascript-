@@ -4,45 +4,94 @@
 //typeof()--operator to check data type
 
 var a;
-a=35;
+a = 35;
 console.log(a);
-console.log(typeof(a));
+console.log(typeof (a));
 
 
-var b="Hello world";
+var b = "Hello world";
 console.log(b);
-console.log(typeof(b));
+console.log(typeof (b));
 
 
-var c=true;
+var c = true;
 console.log(c);
-console.log(typeof(c));
+console.log(typeof (c));
 
 
 
-var d=null; // even though null value is primitive it stores in the form of object.
+var d = null; // even though null value is primitive it stores in the form of object.
 console.log(d);
-console.log(typeof(d));
+console.log(typeof (d));
 
 var e;
 console.log(e);
-console.log(typeof(e));
+console.log(typeof (e));
 
 
-var f=1234567891010888888888888;// it prints in the form of exponential 
+var f = 1234567891010888888888888;// it prints in the form of exponential 
 console.log(f);
-console.log(typeof(f));
+console.log(typeof (f));
 
 
 
-var g=BigInt(f);// bigint is used for the round off the large numbers
+var g = BigInt(f);// bigint is used for the round off the large numbers
 console.log(g);
-console.log(typeof(g));
+console.log(typeof (g));
 
 
 //object, array
 
-var array=[12,1,2,3,4,5];
+var array = [12, 1, 2, 3, 4, 5];
 console.log(array);
-console.log(typeof(array));// type of array is object
+console.log(typeof (array));// type of array is object
 console.log(array[2]);// output 2
+
+
+//object
+
+var obj = {
+    name: "manoj naidu",
+    class: "jap-11",
+    age: 23,
+    marks: "A"
+}
+console.log(obj);
+console.log(typeof (obj));
+
+
+//operators 
+//ARITHMETIC OPERATORS
+//+,-,*,/,**
+var a = 12;
+var b = 13;
+console.log(a + b);
+console.log(a ** 2);
+console.log(a - b);
+console.log(a * b);
+console.log(a / b);
+
+//post increment 
+
+var c = 10;
+console.log(c);
+console.log(c++);
+console.log(c);
+console.log(c--);
+console.log(c);
+
+
+
+//pre increment
+
+console.log(++c);
+console.log(--c);
+
+
+
+var d=45;
+var e="hello";
+var f=63;
+var g=d+e+f;
+console.log(g);
+console.log(typeof(g));
