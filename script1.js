@@ -47,3 +47,36 @@ else if(age>15)
 else{
     alert("give correct input");
 }
+
+
+
+
+//switch case 
+
+var num1 =Number(prompt("enter the number1"));
+var num2 =Number(prompt("enter the number1"));
+var operator =prompt("Enter the operator");
+switch(operator)
+{
+    case '+':
+        alert("Addition of two numbers is"+" "+(num1+num2));
+        break;
+    case '-':
+        alert("subctraction of two numbers is"+" "+(num1-num2));
+        break;
+    case '*':
+        alert("Multiplication of two numbers is"+" "+(num1*num2));
+        break;
+     case '/':
+        alert("Division of two numbers is"+" "+(num1/num2));
+        break;
+    case '**':
+        alert("power of two numbers is"+" "+(num1**num2));
+        break;
+    default:
+        alert("enter valid output");
+
+
+
+
+}
