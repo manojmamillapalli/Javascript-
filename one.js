@@ -102,6 +102,7 @@ var b = 23;
 var c = a + b;
 console.log(c);
 
+
 //relational operators 
 //<=, >=, ==, ===, !=, !==
 var a=25;
