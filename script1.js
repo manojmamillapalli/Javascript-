@@ -76,7 +76,42 @@ switch(operator)
     default:
         alert("enter valid output");
 
+}
+
+//loops
+
+//while loop
+
+var i=1;
+while(i<=10)
+{
+    i++;
+    console.log(i);
+}
 
 
+// dow hile loop
 
+var j=20;
+do{
+    j++;
+    console.log(j);
+}
+while(j>=40)
+
+//for loop
+
+for(k=14;k<=20;k++)
+{
+    console.log(k);
+}
+
+
+// 
+
+var arr=[12,13,14,15,16,17];
+
+for(var x in arr)
+{
+    console.log(arr[x]);
 }
