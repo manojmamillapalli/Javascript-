@@ -29,13 +29,19 @@ for(var x of arr) //here the x value stores the values of the array FileSystemDi
     console.log(x);
 }
 
-var number1=
-{
-    name:"pinakini",
-    number:12345,
-    place:"chennai"
-}
-for(var x of number1)
-{
-    console.log(x);// for objects the for of loop is not iterable
-}
+// var number1=
+// {
+//     name:"pinakini",
+//     number:12345,
+//     place:"chennai"
+// }
+// for(var x of number1)
+// {
+//     console.log(x);// for objects the for of loop is not iterable
+// }
+
+// for each loop
+var arr=[1,2,3,4,5,6,7,8,9,10];
+arr.forEach((val, index)=>{
+    console.log(`value ${val} + index also ${index}`)
+})
