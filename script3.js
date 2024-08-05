@@ -59,3 +59,46 @@ Multiply(2,3,4);
     return mul;
  }
  console.log(a2(3,4,5));
+
+ //javascript is an asynchronic language
+
+ function a3(xyz)// passing function 2 as an argument
+ {
+    console.log("code");
+    xyz();// calling function2
+ }
+ a3(b3);//calling function2 in the function1
+ function b3()
+ {
+    console.log("gnan");
+ }
+
+
+
+
+ function A(xyz)
+ {
+    console.log("function A");
+    xyz(3,4);
+ }
+ A(B);
+ function B(a,b)
+ {
+   c=a+b;
+   console.log(c);
+ }
+ 
+
+let arr=[12,13,14,15,16];// map function used to iterate the array or map
+arr.map((values, index)=>{
+    console.log(values*2);
+})
+
+
+//filter in an array
+let arr1=[12,13,14,15,16,17];
+let filtered=arr.filter(item=>item>12);// function which is used to add conditions 
+filtered.map((values, index)=>
+{
+    console.log(values);
+})
