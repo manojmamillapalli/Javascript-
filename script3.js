@@ -28,3 +28,34 @@ function Add(a,b)// non void function
     return c;
 }
 console.log(Add(3,9));
+
+
+function Multiply(a,b,c)
+{
+    d=a*b*c;
+    console.log(d);
+}
+Multiply(2,3,4);
+
+
+//ARROW FUNCTIONS
+ const a=()=>// non parametarized
+ {
+    console.log("arrow function");
+ }
+ a();
+
+ const a1=(c,d)=>// parameterized
+ {
+    e=c*d;// void function
+    console.log(e);
+ }
+ a1(2,3);
+
+
+ const a2=(f,g,h)=>// using return type
+ {
+    mul=f*g*h;
+    return mul;
+ }
+ console.log(a2(3,4,5));
