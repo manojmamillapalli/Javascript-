@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <form name="myform" onsubmit="return validationForm()">
+            <label>Username</label>
+            <input type="text" placeholder="enter username" name="username" /><br>
+            <label>Email</label>
+            <input type="text" placeholder="enter email" name="email" /><br>
+            <label>Password</label>
+            <input type="password" placeholder="enter password" name="password" /><br>
+            <label>Confirm Password</label>
+            <input type="password" placeholder="confirm password" name="conformpassword" /><br>
+            <button type="submit">Submit</button>
+        </form>
+    </center>
+    <script>
+        function validationForm() {
+            var username = document.forms["myform"]["username"].value;
+            var email = document.forms["myform"]["email"].value;
+            var password = document.forms["myform"]["password"].value;
+            var conformpassword = document.forms["myform"]["conformpassword"].value;
+
+            var usernameRegex = /^[a-zA-Z0-9]{3,}$/;
+            var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,12}$/;
+
+            if (!usernameRegex.test(username)) {
+                alert("Invalid username. It must be at least 3 characters long and contain only letters and numbers.");
+                return false;
+            }
+            if (!emailRegex.test(email)) {
+                alert("Invalid email address.");
+                return false;
+            }
+            if (!passwordRegex.test(password)) {
+                alert("Invalid password. It must be 6-12 characters long and include at least one uppercase letter, one lowercase letter, and one number.");
+                return false;
+            }
+            if (password !== conformpassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+
+            alert("Form submitted successfully");
+            return true;
+        }
+    </script>
+
+</body>
+
+</html>
