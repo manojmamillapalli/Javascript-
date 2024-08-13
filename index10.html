@@ -15,7 +15,17 @@
         {
             console.log("HELLO WORLD");
         }
-        setInterval(Hello, 3000);// sets the time after how much time the function need to get executed
+        var IntervalId=setInterval(Hello, 2000);// sets the time after how much time the function need to get executed
+        setTimeout(()=>
+    {
+        clearInterval(IntervalId);
+        console.log("it is stopped after 8 sec");
+    }, 8000)
+    setTimeout(()=>
+    {
+        clearTimeout(IntervalId);
+        console.log("it is stopped after 8 sec");
+    }, 0)// it also stops the execution of the function after the time out
     </script>
 </body>
 </html>
