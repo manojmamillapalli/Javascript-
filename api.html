@@ -68,6 +68,59 @@ c.then((res)=>
  console.log(error);
 
 })
+
+var d=fetch("https://reqres.in/api/users/2",
+  {  method:"PUT",
+    headers:{
+        'ContentType':'application/json'
+    },
+    body:JSON.stringify({
+        name:"sheldon",
+        place:"Newyork",
+        age:54
+    
+    })
+})
+d.then((res)=>
+{
+    console.log(res);
+    return res.json();
+}).then((val)=>
+{
+    console.log(val);
+})
+.catch((error)=>
+{
+ console.log(error);
+
+})
+
+
+var e=fetch("https://reqres.in/api/users/2",
+  {  method:"DELETE",
+    headers:{
+        'ContentType':'application/json'
+    },
+    body:JSON.stringify({
+        
+    
+    })
+})
+e.then((res)=>
+{
+    console.log(res);
+   // return res.json();
+}).then((val)=>
+{
+    console.log(val);
+})
+.catch((error)=>
+{
+ console.log(error);
+
+})
+
+
     </script>
 </body>
 </html>
