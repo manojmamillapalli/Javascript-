@@ -17,6 +17,57 @@
 {
     console.error(error);
 })
+//post
+//method, headers, body
+let b=fetch("https://reqres.in/api/users",{
+    method:'POST',
+    headers:{
+        'Content-type':'application/json'
+    },
+    body:JSON.stringify(
+        {
+            name:"JOHN",
+            place:"New Zealand",
+            age:54
+        }
+    )
+}).then((res)=>
+{
+    console.log(res);
+    return res.json();
+}).then((val)=>
+{
+    console.log(val);
+})
+.catch((error)=>
+{
+ console.log(error);
+
+})
+let c=fetch("https://reqres.in/api/unknown/2"
+    // method:'GET',
+    // headers:{
+    //     'Content-type':'application/json'
+    // },
+    // body:JSON.stringify(
+    //     {
+            
+    //     }
+    // )
+)
+c.then((res)=>
+{
+    console.log(res);
+    return res.json();
+}).then((val)=>
+{
+    console.log(val);
+})
+.catch((error)=>
+{
+ console.log(error);
+
+})
     </script>
 </body>
 </html>
