@@ -22,8 +22,25 @@
         //formdata ,input ,info ,api 
         let form =document.getElementById('form');
         let input=document.getElementById('input');
-        let info=documrnt.getElementById('info');
+        let info=document.getElementById('info');
         let apiKey="eaf6e1a056049937e69e60ea90e27013";
+        //const info.textContent="";
+        const inputValue=input.value;
+        //alert(inputValue);
+       form.addEventListener('submit',((e)=>
+    {
+        e.preventDefault();
+        info.textContent="";
+        const inputValue=input.value;
+       // alert(inputValue);
+       const url=`https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${apiKey}&units=metric`;
+       fetch(url)
+       .then((res)=>
+{
+    console.log(res);
+    return res.json();
+})
+    }))
     </script>
 </body>
 
