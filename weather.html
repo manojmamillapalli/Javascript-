@@ -7,12 +7,12 @@
     <title>Document</title>
 </head>
 
-<body>
+<body style="background-image:url(blue-sky-with-rainy-clouds.jpg); background-size: cover;">
     <center>
-        <h1>weather app</h1>
+        <h1 style="margin-top:10%;">WEATHER APP</h1>
         <form id="form">
-            <input type="text" placeholder="enter text" name="input" id="input">
-            <button type="submit">submit</button>
+            <input type="text" placeholder="enter text" name="input" id="input" size="50" width="20px"><br><br>
+            <button type="submit" style="padding: 0.5% 2% 0.5% 2%; background-color: yellow; color: rgb(18, 18, 18);">submit</button>
         </form>
         <div id="info">
 
@@ -40,6 +40,20 @@
     console.log(res);
     return res.json();
 })
+.then((data)=>
+{
+    const{name, main}=data;
+    const para=document.getElementById('info');
+    para.innerHTML=`<p>City: ${name} </p>
+    <p>Temperature is about ${main.temp} <sup>o</sup>C</p>`;
+    console.log(data);
+})
+.catch((error)=>
+{
+    console.error("Entered city is wrong:");
+    alert("entered city is wrong redirect 300:");
+})
+form.reset();
     }))
     </script>
 </body>
