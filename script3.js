@@ -100,5 +100,5 @@ let arr1=[12,13,14,15,16,17];
 let filtered=arr.filter(item=>item>12);// function which is used to add conditions 
 filtered.map((values, index)=>
 {
-    console.log(values);
+    console.log(values, index);
 })
